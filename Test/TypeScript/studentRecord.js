@@ -1,31 +1,14 @@
-var Students = [
-    {
-        Name: "abc",
-        Value: {
-            age: 20,
-            grade: "A"
-        }
+var Students = {
+    'Alice': { age: 21,
+        grade: "A"
     },
-    {
-        Name: "bcd",
-        Value: {
-            age: 19,
-            grade: "B"
-        }
+    'Bob': { age: 20,
+        grade: "B"
     }
-];
+};
 console.log(Students);
-Students.push({
-    Name: "xyz",
-    Value: {
-        age: 21,
-        grade: "C"
-    }
-});
+Students["Jan"] = { age: 19, grade: "A" };
 console.log(Students);
-Students.forEach(function (element) {
-    var Name = element.Name;
-    var age = element.Value.age;
-    var grade = element.Value.grade;
-    console.log(Name + " " + age + " " + grade);
-});
+for (var key in Students) {
+    console.log(key, Students[key]);
+}
